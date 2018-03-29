@@ -1,0 +1,5 @@
+package model;
+
+public enum MenuTagName {
+	PERIODIC, MAGAZINE, BOOK, PAPER, IS_TAKEN, ALL, HOME, READINGROOM, FALSE, MAX_EXPIRE_DAYS, LIBRARY
+}
