@@ -66,20 +66,22 @@ public class MenuSaxHandler extends DefaultHandler {
 			((Book) periodic).setMaxExpireDays(Integer.parseInt(text.toString()));
 			break;
 		case MAGAZINE:
-			periodicList.add(periodic);
-			periodic = null;
+			addToList(periodic);
 			break;
 		case BOOK:
-			periodicList.add(periodic);
-			periodic = null;
+			addToList(periodic);
 			break;
 		case PAPER:
-			periodicList.add(periodic);
-			periodic = null;
+			addToList(periodic);
 			break;
 		}
 	}
 
+	public void addToList(Periodic periodic) {
+		periodicList.add(periodic);
+		periodic = null;
+	}
+	
 	public void warning(SAXParseException exception) {
 		System.err.println("WARNING: line " + exception.getLineNumber() + ": " + exception.getMessage());
 	}
